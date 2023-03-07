@@ -19,10 +19,12 @@ class CPU{
   }
 
   void display(){
-    System.out.printf("Price : %d\n",price);
+    System.out.printf("\nPrice : %d$\n",price);
     System.out.println("Processor information");
+    System.out.println("---------------------");
     processor.display();
-    System.out.println("RAM information");
+    System.out.printf("\nRAM information\n");
+    System.out.println("----------------");
     ram.display();
   }
 
@@ -61,10 +63,20 @@ class CPU{
 
 class Program5{
   public static void main(String args[]){
-    
-    //CPU.Processor intel = new CPU.Processor(300,6,"Intel Corporation");
-    //intel.display();
-    CPU cpu = new CPU(500,8,"Intel",16,"Kingston");
+   
+    Scanner scanner = new Scanner(System.in);
+
+    int price , no_of_cores , capacity;
+    String CPU_manufacturer , RAM_manufacturer;
+
+    System.out.println("Enter the CPU manufacturer , number of cores , price , RAM manufacturer and capacity : ");
+    CPU_manufacturer = scanner.nextLine();
+    no_of_cores = Integer.parseInt(scanner.nextLine());
+    price = Integer.parseInt(scanner.nextLine());
+    RAM_manufacturer = scanner.nextLine();
+    capacity = Integer.parseInt(scanner.nextLine());
+
+    CPU cpu = new CPU(price,no_of_cores,CPU_manufacturer,capacity,RAM_manufacturer);
     cpu.display();
   }
 }
