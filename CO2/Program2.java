@@ -6,7 +6,7 @@ class Program2{
 
     public static void main(String args[]){
 
-        int number, search ;
+        int number, search , i;
 
         boolean found = false;
 
@@ -19,22 +19,22 @@ class Program2{
 
         System.out.printf("Enter %d numbers : ",number);
 
-        for(int i = 0; i < number; i++){
+        for(i = 0; i < number; i++){
             arr[i] = scanner.nextInt();
         }
 
         System.out.print("Enter th enumber to search : ");
         search = scanner.nextInt();
 
-        for(int i = 0; i < number; i++){
+        for(i = 0; i < number; i++){
             if(arr[i] == search){
                 found = true;
-             
+                break;             
             }
         }
 
         if(!found) System.out.printf("%d not present in array\n",search);
-        else System.out.printf("%d found at index %d\n",search);
+        else System.out.printf("%d found at position %d\n",search,i+1);
 
 
         
