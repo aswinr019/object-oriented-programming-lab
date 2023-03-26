@@ -8,7 +8,7 @@ class Employee{
   int eNo , eSalary;
   String eName;
 
-  void getInfo(int eNo, String eName, int eSalary){
+  void setInfo(int eNo, String eName, int eSalary){
     this.eNo = eNo;
     this.eName = eName;
     this.eSalary = eSalary;
@@ -28,21 +28,34 @@ class Program4{
   public static void main(String args[]){
 
     Scanner scanner = new Scanner(System.in);
-    System.out.println("How many employees : ");
+    System.out.print("How many employees : ");
     int number = scanner.nextInt();
 
-    Employee emp[] = new Employee[number];
+    Employee[] emp = new Employee[number];
 
     for(int i = 0; i < number; i++){
       System.out.printf("Enter the employee number , name , and salary of employee %d\n",i+1);
-      int no = Integer.parseInt(scanner.nextLine());
-      String name = scanner.nextLine();
-      int salary = Integer.parseInt(scanner.nextLine());
-      emp[i].getInfo(no,name,salary);
+      int no = scanner.nextInt();
+      String name = scanner.next();
+      int salary = scanner.nextInt();
+      emp[i] = new Employee();
+      emp[i].setInfo(no,name,salary);
     }
 
+    System.out.println("Enter an eployee number to search for : ");
+    int search = scanner.nextInt();
+    boolean found = false;
+
     for(int i = 0; i < number; i++){
-      emp[i].display();
+      if(emp[i].eNo == search){
+        found = true;
+        emp[i].display();
+        break;
+      }
     }
+
+    if(!found)
+      System.out.println("Employee not found!");
+
   }
 }
