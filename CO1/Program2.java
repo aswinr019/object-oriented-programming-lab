@@ -44,6 +44,20 @@ class Program2{
         }
       }
 
+      System.out.println("First matrix : ");
+      for(int i = 0; i < row[0]; i++){
+        for(int j = 0; j < col[0]; j++){
+          System.out.printf("%d\t",mat1[i][j]);  
+        }
+        System.out.println();
+      }
+      System.out.println("Second matrix : ");
+      for(int i = 0; i < row[0];i++){
+        for(int j = 0; j < col[0]; j++){
+          System.out.printf("%d\t",mat2[i][j]);
+        }
+        System.out.println();
+      }
       System.out.println("The sum of two matrices is : ");
 
       for(int i = 0; i < row[0]; i++){
