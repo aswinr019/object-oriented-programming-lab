@@ -112,35 +112,6 @@ class Program4{
    }
    else
      System.out.println("The given matrix doesn't have a transpose , i.e , it is not a symmetric matrix");
-   /*
-   System.out.println("The given matrix : ");
-   for(int i = 0; i < row; i++){
-    for(int j = 0; j < col; j++){
-      System.out.printf("%d\t",mat[i][j]);    
-      }
-    System.out.println();
-   }
-
-   System.out.println("The transpose of given matrix : ");
-   for(int i = 0; i < col; i++){
-    for(int j = 0; j < row; j++){
-      transpose[i][j] = mat[j][i];
-      System.out.printf("%d\t",transpose[i][j]);
-    }
-    System.out.println();
-   }
-
-   if(row != col) System.out.println("The given matrix is not a symmetric matrix");
-   else {
-    boolean is_transpose = true;
-    for(int i = 0; i < row; i++){
-      for(int j = 0; j < col; j++){
-        if( mat[i][j] != transpose[i][j]) is_transpose = false;
-      }
-    }
-    if(is_transpose) System.out.println("The given matrix is a symmetric matrix!");
-    else System.out.println("The given matrix is not a symmetric matrix");
-   }*/
    scanner.close();
  } 
 }

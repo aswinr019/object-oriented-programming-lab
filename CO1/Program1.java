@@ -50,9 +50,6 @@ class Program1{
     Product p3 = new Product(pcode[2],pname[2],price[2]);
     Product lower;
 
-    /*if(p1.price < p2.price && p1.price < p3.price ) System.out.printf("Price of product one is lesser");
-    else if(p2.price < p1.price && p2.price < p3.price ) System.out.println("Price of product two is lesser");
-    else System.out.println("Price of product three is lesser"); */
 
     lower = (p1.price < p2.price && p1.price < p3.price) ? p1: (p2.price < p1.price && p2.price < p3.price ) ? p2 : p3;
 
