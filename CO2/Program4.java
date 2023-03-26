@@ -57,5 +57,6 @@ class Program4{
     if(!found)
       System.out.println("Employee not found!");
 
+    scanner.close();
   }
 }

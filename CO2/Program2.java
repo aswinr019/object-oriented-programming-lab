@@ -36,7 +36,7 @@ class Program2{
         if(!found) System.out.printf("%d not present in array\n",search);
         else System.out.printf("%d found at position %d\n",search,i+1);
 
-
+        scanner.close();
         
     }
 
