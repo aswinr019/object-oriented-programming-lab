@@ -33,7 +33,7 @@ class Program3{
     int option;
     boolean flag = true;
 
-    System.out.printf("0) exit\n1) to uppercase\n2) to lowercase\n3) concat two string\n4) length of a string\n5) replace string\n\n-> ");
+    System.out.printf("0) exit\n1) to uppercase\n2) to lowercase\n3) concat two string\n4) length of a string\n5) replace string\n\n");
     
     while(flag){
 
