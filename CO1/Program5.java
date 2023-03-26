@@ -11,7 +11,7 @@ class CPU{
   Processor processor;
   RAM ram;
 
-  public CPU(int price, int no_of_cores , String pManufacturer , int memory , String rManufacturer ){
+  CPU(int price, int no_of_cores , String pManufacturer , int memory , String rManufacturer ){
 
     this.price = price;
     this.processor = new Processor(no_of_cores, pManufacturer);
