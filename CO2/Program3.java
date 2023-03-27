@@ -22,6 +22,10 @@ class StringFunctions{
   String replace(String str1, String str2, String str3){
     return str1.replace(str2,str3);
   }
+  String[] split(String str){
+
+    return ( str.split(" "));
+  }
 }
 
 class Program3{
@@ -33,7 +37,7 @@ class Program3{
     int option;
     boolean flag = true;
 
-    System.out.printf("0) exit\n1) to uppercase\n2) to lowercase\n3) concat two string\n4) length of a string\n5) replace string\n\n");
+    System.out.printf("0) exit\n1) to uppercase\n2) to lowercase\n3) concat two string\n4) length of a string\n5) replace string\n6) split string\n\n");
     
     while(flag){
 
@@ -80,6 +84,17 @@ class Program3{
           System.out.println("Enter the substring to be replaced with : ");
           String str3 = scanner.next();
           System.out.printf("The new string : %s\n",sf.replace(str1,str2,str3));
+          break;
+        }
+        case 6 : {
+          System.out.print("Enter a string to split (split at whitespcae) : ");
+          String str = scanner.nextLine();
+          String[] words = sf.split(str);
+          System.out.print("String after split : ");
+          for(int i = 0 ; i < words.length ; i++){
+            System.out.printf("%s\t",words[i]);
+          }
+          System.out.println();
           break;
         }
         default: {
