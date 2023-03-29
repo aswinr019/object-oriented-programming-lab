@@ -71,19 +71,19 @@ class Program3{
       String name = scanner.next();
       String address = scanner.next();
       String gender = scanner.next();
-      int age = scanner.nextInt();
-      int empid = scanner.nextInt();
+      int age = Integer.parseInt(scanner.next());
+      int empid = Integer.parseInt(scanner.next());
       String company_name = scanner.next();
       String qualification = scanner.next();
-      int salary = scanner.nextInt();
+      int salary = Integer.parseInt(scanner.next());
       String subject = scanner.next();
       String department = scanner.next();
-      int teacherid = scanner.nextInt();
+      int teacherid = Integer.parseInt(scanner.next());
 
       teacher[i] = new Teacher(name,address,gender,age,empid,company_name,qualification,salary,subject,department,teacherid);
     }
 
-    System.out.println("Teacher Information");
+    System.out.printf("\n\nTeacher Information\n------------------\n");
     for(int i = 0; i < number; i++ ){
       teacher[i].display();
     }
