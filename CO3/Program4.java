@@ -1,5 +1,5 @@
 /* Write a program that has class Publisher , Book , Literature and fiction. Read the information and print the
-details of the book from either the category , using inheritence */
+details of the book from either the category , using inheritance */
 
 import java.util.Scanner;
 

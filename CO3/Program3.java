@@ -9,7 +9,6 @@
 
 import java.util.Scanner;
 
-
 class Person{
   
   String Name , Gender , Address;
