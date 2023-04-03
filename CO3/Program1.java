@@ -29,9 +29,10 @@ class Program1{
 
     int choice;
     Scanner scanner = new Scanner(System.in);
+    Shape shape = new Shape();
     System.out.print("0) exit\n1) Area of circle\n2) Area of triangle\n3) Area of rectangle\n4) Area of square\n\n");
     do{
-      Shape shape = new Shape();
+      
 
       System.out.print("Enter a choice : ");
       choice = scanner.nextInt();
