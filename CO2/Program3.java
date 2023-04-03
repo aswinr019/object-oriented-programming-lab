@@ -88,6 +88,7 @@ class Program3{
         }
         case 6 : {
           System.out.print("Enter a string to split (split at whitespcae) : ");
+           scanner.nextLine();
           String str = scanner.nextLine();
           String[] words = sf.split(str);
           System.out.print("String after split : ");
