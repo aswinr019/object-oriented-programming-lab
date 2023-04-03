@@ -41,7 +41,7 @@ class Program3{
     
     while(flag){
 
-      System.out.println("Enter a choice : ");
+      System.out.print("Enter a choice : ");
       option = scanner.nextInt();
 
       switch(option){
@@ -51,37 +51,39 @@ class Program3{
           break;
         }
         case 1 : {
-          System.out.println("Enter a string to convert to uppercase : ");         
+          System.out.print("Enter a string to convert to uppercase : ");         
           String str = scanner.next();
           System.out.printf("Uppercase : %s\n",sf.upper(str));
           break;
         }
         case 2: {
-          System.out.println("Enter a string to convert to lowercase : ");
+          System.out.print("Enter a string to convert to lowercase : ");
           String str = scanner.next();
           System.out.printf("Lowercase : %s\n",sf.lower(str));
           break;
         }
         case 3: {
-         System.out.println("Enter the first string : ");
+         System.out.print("Enter the first string : ");
          String str1 = scanner.next();
-         System.out.println("Enter the second string : ");
+         System.out.print("Enter the second string : ");
          String str2 = scanner.next();
          System.out.printf("Concated string : %s\n",sf.concat(str1,str2));
          break;
         }
         case 4: {
-          System.out.println("Enter the string to find length : ");
+          System.out.print("Enter the string to find length : ");
           String str = scanner.next();
           System.out.printf("The length of the string is :  %d\n",sf.len(str));
           break;
         }
         case 5: {
-          System.out.println("Enter the string : ");
-          String str1 = scanner.next();
-          System.out.println("Enter the substring to replace : ");
+          System.out.print("Enter the string : ");
+          scanner.nextLine();
+          String str1 = scanner.nextLine();
+          System.out.print("Enter the substring to replace : ");
+          scanner.next();
           String str2 = scanner.next();
-          System.out.println("Enter the substring to be replaced with : ");
+          System.out.print("Enter the substring to be replaced with : ");
           String str3 = scanner.next();
           System.out.printf("The new string : %s\n",sf.replace(str1,str2,str3));
           break;
@@ -98,7 +100,7 @@ class Program3{
           break;
         }
         default: {
-          System.out.println("Wrong choice!!\n");
+          System.out.println("Wrong choice!!");
         }
       }
     }

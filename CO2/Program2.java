@@ -23,7 +23,7 @@ class Program2{
             arr[i] = scanner.nextInt();
         }
 
-        System.out.print("Enter th enumber to search : ");
+        System.out.print("Enter the number to search : ");
         search = scanner.nextInt();
 
         for(i = 0; i < number; i++){
