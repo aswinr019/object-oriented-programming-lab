@@ -1,8 +1,11 @@
-/* Create an interface having prototypes of functions area() and perimeter(). Create two classes Circle and Rectangle which implements the above interface. Create a menu driven program to find the area and perimeter of objects. 
+/* 
+Create an interface having prototypes of functions area() and perimeter(). Create two classes Circle and Rectangle which implements the above interface. Create a menu driven program to find the area and perimeter of objects. 
 */
 
 
 import java.util.Scanner;
+import java.lang.Math;
+
 
 interface Shape{
 
@@ -20,11 +23,11 @@ class Circle implements Shape {
   }
 
   public double area(){
-    return (3.14 * this.radius * this.radius);
+    return ( Math.PI * this.radius * this.radius);
   }
 
   public double perimeter(){
-    return ( 2 * 3.14 * this.radius);
+    return ( 2 * Math.PI * this.radius);
   }
 }
 

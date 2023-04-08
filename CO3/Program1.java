@@ -58,7 +58,7 @@ class Program1{
           break;
           }
         case 3 : {
-          System.out.print("Enter the lenght and breadth of rectangle : ");
+          System.out.print("Enter the length and breadth of rectangle : ");
           int length = scanner.nextInt();
           int breadth = scanner.nextInt();
           int area = shape.area(length,breadth);

@@ -1,5 +1,5 @@
 /* Create a class Student and Sports. Create another class Result inherited from Student and Sports. Display 
-the accademic and sports scores of a student. 
+the academic and sports scores of a student. 
 */
 
 

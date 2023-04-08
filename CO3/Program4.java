@@ -1,5 +1,5 @@
 /* Write a program that has class Publisher , Book , Literature and fiction. Read the information and print the
-details of the book from either the category , using inheritence */
+details of the book from either the category , using inheritance */
 
 import java.util.Scanner;
 
@@ -36,7 +36,7 @@ class Literature extends Book {
 
   void display() {
     System.out.printf(
-        "\nBook Name : %s\nGenere : Literature\nAuthor : %s\nPublisher : %s\nNumber of pages : %s\nPrice : %s\n\n",
+        "\nBook Name : %s\nGenere : Literature\nAuthor : %s\nPublisher : %s\nNumber of pages : %d\nPrice : %d\n\n",
         this.lit_name, this.author, this.publisher, this.no_of_pages, this.price);
   }
 }
@@ -52,7 +52,7 @@ class Fiction extends Book {
 
   void display() {
     System.out.printf(
-        "\nBook Name : %s\nGenere : Fiction\nAuthor : %s\nPublisher : %s\nNumber of pages : %s\nPrice : %s\n\n",
+        "\nBook Name : %s\nGenere : Fiction\nAuthor : %s\nPublisher : %s\nNumber of pages : %d\nPrice : %d\n\n",
         this.fict_name, this.author, this.publisher, this.no_of_pages, this.price);
   }
 
