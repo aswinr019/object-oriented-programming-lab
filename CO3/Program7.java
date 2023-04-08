@@ -19,6 +19,7 @@ import java.lang.Math;
 interface Bill {
   
   void calculate();
+  
 }
 
 class Order implements Bill{
