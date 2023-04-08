@@ -45,6 +45,7 @@ class Program4 {
     average = (double) sum / count ;
 
     System.out.printf("average : %.2f\n",average);
+    scanner.close();
   }
 }
 
