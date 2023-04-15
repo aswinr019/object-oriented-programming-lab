@@ -68,5 +68,7 @@ class Program1{
       }
 
     }while( choice != 0 );
+
+    scanner.close();
   }
 }

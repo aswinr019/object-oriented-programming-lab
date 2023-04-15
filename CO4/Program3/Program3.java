@@ -61,10 +61,11 @@ class Program3 {
       user.login(username,password);
     }
     catch( AuthenticationException e ){
-      System.out.println(e);
+      System.out.println(e.getMessage());
     }
     catch( Exception e ){
       System.out.println("Something went wrong!");
     }
+    scanner.close();
   }
 }
