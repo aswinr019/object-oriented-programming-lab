@@ -27,14 +27,12 @@ class Program4 {
 
       try{
         System.out.printf("enter number %d : ",i+1);
-     
         number = scanner.nextInt();
 
         if(number < 0)
           throw new NegativeNumberException("Negative numbers are not allowed!");
 
         sum += number;
-
       }
       catch(NegativeNumberException e){
         System.out.println(e.getMessage());
