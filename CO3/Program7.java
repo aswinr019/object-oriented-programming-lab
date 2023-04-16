@@ -26,48 +26,46 @@ class Order implements Bill{
 
     Date date;
     String[] name;
-    int number,order_no ,net_amount ;
-    int[] product_id; 
-    int[] quantity; 
-    int[] unit_price; 
-    int[] total; 
+    int number,orderNo ,netAmount ;
+    int[] productId, quantity, unitPrice,total; 
 
-    Order(int number , String[] name , int[] product_id , int[] quantity , int[] unit_price){
-      this.order_no = (int)( Math.random() * 1000 );
+    Order(int number , String[] name , int[] productId , int[] quantity , int[] unitPrice){
+      this.orderNo = (int)( Math.random() * 1000 );
       this.date = new Date();
       this.number = number;
-      this.net_amount  = 0;
 
-      this.name = new String[number];
-      this.product_id = new int[number];
-      this.quantity = new int[number];
-      this.unit_price = new int[number];
-      this.total = new int[number];
-
-      for(int i = 0; i < this.number ; i++){
-        
-        this.name[i] = name[i];
-        this.product_id[i] = product_id[i];
-        this.quantity[i] = quantity[i];
-        this.unit_price[i] = unit_price[i];
-        this.total[i] = unit_price[i] * quantity[i];
-        this.net_amount += this.total[i];
-    }
+      this.netAmount  = 0;
+      this.productId = productId;
+      this.quantity = quantity;
+      this.unitPrice = unitPrice;
+      this.name = name;
   }
 
-    public void calculate(){
+    public void calculate (){
 
+      this.total = new int[this.number];
+
+      
+      for(int i = 0; i < this.number ; i++){
+        this.total[i] = unitPrice[i] * quantity[i];
+        this.netAmount += this.total[i];
+      }
+    }
+
+    public void printBill(){
+
+      calculate();
       System.out.println("  \t\t\t\tBILL\t\t\t\t");
       System.out.println("--------------------------------------------------------------------------\n");
-      System.out.printf("Order No : %d\n\n",this.order_no);
+      System.out.printf("Order No : %d\n\n",this.orderNo);
       System.out.printf("Date : %tD%n\n\n",this.date);
       System.out.printf("Product Id\tName\t\tQuantity\tUnit Price\tTotal Price\n");
       System.out.printf("---------------------------------------------------------------------------\n");
       for(int i = 0; i < this.number; i++){
-        System.out.printf("%d\t\t%s\t\t%d\t\t%d\t\t%d\n",this.product_id[i],this.name[i],this.quantity[i],this.unit_price[i],this.total[i]);
+        System.out.printf("%d\t\t%s\t\t%d\t\t%d\t\t%d\n",this.productId[i],this.name[i],this.quantity[i],this.unitPrice[i],this.total[i]);
       }
       System.out.printf("---------------------------------------------------------------------------\n");
-      System.out.printf("\t\t\t\t\t\t\tNet.Amount : %d\n\n\n\n",this.net_amount);
+      System.out.printf("\t\t\t\t\t\t\tNet.Amount : %d\n\n\n\n",this.netAmount);
     }
     
 }
@@ -81,19 +79,19 @@ class Program7{
     int number = scanner.nextInt();
 
     String[] name = new String[number];
-    int[] product_id = new int[number];
+    int[] productId = new int[number];
     int[] quantity = new int[number];
-    int[] unit_price = new int[number];
+    int[] unitPrice = new int[number];
 
     for(int i = 0; i < number ; i++){
       System.out.printf("Enter the name , product id , quantity and unit price of product %d : ",i+1);
       name[i] = scanner.next();
-      product_id[i] = scanner.nextInt();
+      productId[i] = scanner.nextInt();
       quantity[i] = scanner.nextInt();
-      unit_price[i] = scanner.nextInt();
+      unitPrice[i] = scanner.nextInt();
     }
-      Order order = new Order(number,name,product_id,quantity,unit_price);
-      order.calculate();
+      Order order = new Order(number,name,productId,quantity,unitPrice);
+      order.printBill();
     
     scanner.close();
   }

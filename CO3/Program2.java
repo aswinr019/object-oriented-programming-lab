@@ -8,29 +8,29 @@ import java.util.Scanner;
 
 class Employee{
   
-  int Empid, Salary;
-  String Name, Address;
+  int empid, salary;
+  String name, address;
 
-  Employee(int Empid, String Name , int Salary , String Address){
-    this.Empid = Empid;
-    this.Name = Name;
-    this.Salary = Salary;
-    this.Address  = Address;
+  Employee(int empid, String name , int salary , String address){
+    this.empid = empid;
+    this.name = name;
+    this.salary = salary;
+    this.address  = address;
   }
 }
 
 class Teacher extends Employee{
 
-  String Department , Subject;
+  String department , subject;
 
-  Teacher(int Empid , String Name , int Salary , String Address, String Department , String Subject){
-    super(Empid , Name , Salary , Address );
-    this.Department = Department;
-    this.Subject = Subject;
+  Teacher(int empid , String name , int salary , String address, String department , String subject){
+    super(empid , name , salary , address );
+    this.department = department;
+    this.subject = subject;
   }
 
   void display(){
-    System.out.printf("Employee Id : %d\nName : %s\nSalary : %d\nAddress : %s\nDepartment : %s\nSubject : %s\n\n\n",this.Empid,this.Name,this.Salary,this.Address,this.Department,this.Subject);
+    System.out.printf("Employee Id : %d\nName : %s\nSalary : %d\nAddress : %s\nDepartment : %s\nSubject : %s\n\n\n",this.empid,this.name,this.salary,this.address,this.department,this.subject);
   }
 }
 
