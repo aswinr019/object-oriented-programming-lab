@@ -65,5 +65,6 @@ class Program2 {
         }
       }
     } while (choice != 0);
+    scanner.close();
   }
 }

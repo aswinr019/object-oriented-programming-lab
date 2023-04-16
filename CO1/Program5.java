@@ -6,7 +6,6 @@
 import java.util.Scanner;
 
 class CPU{
-  
   int price;
   Processor processor;
   RAM ram;
@@ -29,12 +28,11 @@ class CPU{
   }
 
   class Processor{
-    
+
     int no_of_cores;
     String manufacturer;
 
-    public  Processor(int no_of_cores , String manufacturer){
-      
+    Processor(int no_of_cores , String manufacturer){
       this.no_of_cores = no_of_cores;
       this.manufacturer = manufacturer;
     }
@@ -49,7 +47,7 @@ class CPU{
     int memory;
     String manufacturer;
 
-    public RAM(int memory , String manufacturer){
+    RAM(int memory , String manufacturer){
       this.memory = memory;
       this.manufacturer = manufacturer;
     }

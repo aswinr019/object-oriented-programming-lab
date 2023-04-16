@@ -65,47 +65,43 @@ class Program4 {
     int choice;
 
     do{
-      System.out.print("enter a choice :\n0) exit\n1)Literature book\n2)Fiction book\n\n-> ");
+      System.out.print("enter a choice :\n0) exit\n1) Literature book\n2) Fiction book\n\n-> ");
       choice = scanner.nextInt();
 
       switch (choice) {
 
-        case 0: {
+        case 0 -> {
           System.out.println("exiting...");
-          break;
         }
 
-        case 1: {
+        case 1 -> {
           System.out.printf("Enter the book title , author name , publisher name , price and number of pages of literature : ");
           String title = scanner.next();
           String author = scanner.next();
           String publisher = scanner.next();
-          int price = Integer.parseInt(scanner.next());
-          int page_no = Integer.parseInt(scanner.next());
+          int price = scanner.nextInt();
+          int page_no = scanner.nextInt();
 
           Literature lit = new Literature(publisher, author, page_no, price, title);
 
           System.out.print("Literature details\n-----------------\n");
           lit.display();
-          break;
         }
 
-        case 2: {
-          System.out
-              .printf("Enter the book title , author name , publisher name , price and number of pages of fiction : ");
+        case 2 -> {
+          System.out.printf("Enter the book title , author name , publisher name , price and number of pages of fiction : ");
           String title = scanner.next();
           String author = scanner.next();
           String publisher = scanner.next();
-          int price = Integer.parseInt(scanner.next());
-          int page_no = Integer.parseInt(scanner.next());
+          int price = scanner.nextInt();
+          int page_no = scanner.nextInt();
 
           Fiction fict = new Fiction(publisher, author, page_no, price, title);
 
           System.out.print("Literature details\n-----------------\n");
           fict.display();
-          break;
         }
-        default: {
+        default -> {
           System.out.println("Wrong choice");
         }
       }
