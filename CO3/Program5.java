@@ -39,7 +39,7 @@ class Result extends Sports {
   }
 
   void display(){
-    System.out.printf("Student name : %s\nStudent roll no : %d\nSports score : %d\nAccademic score : %d\n",this.name,this.roll_no,this.sports_score,this.accademic_score);
+    System.out.printf("Student name : %s\nStudent roll no : %d\nSports score : %d\nAccademic score : %d\nTotal score: %d\n",this.name,this.roll_no,this.sports_score,this.accademic_score,(this.sports_score + this.accademic_score));
   }
 }
 
