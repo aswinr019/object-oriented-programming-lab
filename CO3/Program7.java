@@ -79,7 +79,7 @@ class Program7{
     int[] unit_price = new int[number];
 
     for(int i = 0; i < number ; i++){
-      System.out.printf("Enter the name , product id , quantity andn unit price of product %d : ",i+1);
+      System.out.printf("Enter the name , product id , quantity and unit price of product %d : ",i+1);
       name[i] = scanner.next();
       product_id[i] = scanner.nextInt();
       quantity[i] = scanner.nextInt();
