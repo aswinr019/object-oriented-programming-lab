@@ -38,10 +38,14 @@ class ClientHandler implements Runnable {
       BufferedReader in = new BufferedReader(new InputStreamReader(clientSocket.getInputStream()));
       PrintWriter out = new PrintWriter(clientSocket.getOutputStream(), true);
 
+      BufferedReader userInput = new BufferedReader(new InputStreamReader(System.in));
+      
       String inputLine;
       while ((inputLine = in.readLine()) != null) {
         System.out.println("Received message from client " + clientSocket.getInetAddress().getHostAddress() + ": " + inputLine);
-        out.println("Server: " + inputLine);
+        System.out.print("Enter a message to send to client " + clientSocket.getInetAddress().getHostAddress() + ": ");
+        String userMessage = userInput.readLine();
+        out.println("Server: " + userMessage);
       }
 
       System.out.println("Client disconnected: " + clientSocket.getInetAddress().getHostAddress());
@@ -51,6 +55,7 @@ class ClientHandler implements Runnable {
     }
   }
 }
+
 
 
 
