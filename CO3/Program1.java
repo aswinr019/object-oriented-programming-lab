@@ -38,42 +38,42 @@ class Program1{
       choice = scanner.nextInt();
 
       switch(choice){
-        case 0 : {
+        case 0 -> {
           System.out.println("exiting...");
-          break;
+
         }
-        case 1 : {
-          System.out.print("Enter the radius of the circle : ");
+        case 1 -> {
+          System.out.print("Enter the radius of the circle -> ");
           double radius = scanner.nextDouble();
           double area = shape.area(radius);
-          System.out.printf("The area of the circle is %f\n",area);
-          break;
+          System.out.printf("The area of the circle is %.2f\n",area);
+
         }
-        case 2 : {
-          System.out.print("Enter the base and height of the triangle : ");
+        case 2 -> {
+          System.out.print("Enter the base and height of the triangle -> ");
           double base = scanner.nextDouble();
           double height = scanner.nextDouble();
           double area = shape.area(base,height);
-          System.out.printf("The are of the triangle is %f\n",area);
-          break;
+          System.out.printf("The are of the triangle is %.2f\n",area);
+
           }
-        case 3 : {
-          System.out.print("Enter the length and breadth of rectangle : ");
+        case 3 -> {
+          System.out.print("Enter the length and breadth of rectangle -> ");
           int length = scanner.nextInt();
           int breadth = scanner.nextInt();
           int area = shape.area(length,breadth);
           System.out.printf("The area of the rectangle is %d\n",area);
-          break;
+
         }
-        case 4 : {
+        case 4 -> {
           System.out.print("Enter the side of the square : ");
           int side = scanner.nextInt();
           int area = shape.area(side);
           System.out.printf("The area of the square is %d\n",area);
-          break;
+
         }
 
-        default : {
+        default -> {
           System.out.println("Wrong choice!");
         }
       }
