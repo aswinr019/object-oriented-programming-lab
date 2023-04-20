@@ -8,7 +8,7 @@ public class Client {
     try {
       System.out.println("Client started");
 
-      Socket socket = new Socket("192.168.56.1", 3000);
+      Socket socket = new Socket("127.0.0.1", 3000);
       System.out.println("Connected to server at " + socket.getInetAddress().getHostAddress() + ":3000");
 
       BufferedReader userInput = new BufferedReader(new InputStreamReader(System.in));
