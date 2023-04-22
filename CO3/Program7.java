@@ -50,11 +50,12 @@ class Order implements Bill{
         this.total[i] = unitPrice[i] * quantity[i];
         this.netAmount += this.total[i];
       }
+
+      printBill();
     }
 
     public void printBill(){
 
-      calculate();
       System.out.println("  \t\t\t\tBILL\t\t\t\t");
       System.out.println("--------------------------------------------------------------------------\n");
       System.out.printf("Order No : %d\n\n",this.orderNo);
@@ -90,8 +91,8 @@ class Program7{
       quantity[i] = scanner.nextInt();
       unitPrice[i] = scanner.nextInt();
     }
-      Order order = new Order(number,name,productId,quantity,unitPrice);
-      order.printBill();
+    Bill bill   = new Order(number,name,productId,quantity,unitPrice);
+      bill.calculate();
     
     scanner.close();
   }

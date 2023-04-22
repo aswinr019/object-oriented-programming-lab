@@ -1,5 +1,5 @@
 /* Write a program that has class Publisher , Book , Literature and fiction. Read the information and print the
-details of the book from either the category , using inheritance */
+details of the book from either the category , using inheritance. */
 
 import java.util.Scanner;
 
@@ -15,45 +15,45 @@ class Publisher {
 class Book extends Publisher{
 
   String author;
-  int no_of_pages,price;
+  int noOfPages,price;
 
-  Book(String publisher , String author , int no_of_pages, int price){
+  Book(String publisher , String author , int noOfPages, int price){
     super(publisher);
     this.author = author;
-    this.no_of_pages = no_of_pages;
+    this.noOfPages = noOfPages;
     this.price = price;
   }
 }
 
 class Literature extends Book {
 
-  String lit_name;
+  String litName;
 
-  Literature(String publisher, String author, int no_of_pages, int price, String lit_name) {
-    super(publisher, author, no_of_pages, price);
-    this.lit_name = lit_name;
+  Literature(String publisher, String author, int noOfPages, int price, String litName) {
+    super(publisher, author, noOfPages, price);
+    this.litName = litName;
   }
 
   void display() {
     System.out.printf(
         "\nBook Name : %s\nGenere : Literature\nAuthor : %s\nPublisher : %s\nNumber of pages : %d\nPrice : %d\n\n",
-        this.lit_name, this.author, this.publisher, this.no_of_pages, this.price);
+        this.litName, this.author, this.publisher, this.noOfPages, this.price);
   }
 }
 
 class Fiction extends Book {
 
-  String fict_name;
+  String fictName;
 
-  Fiction(String publisher, String author, int no_of_pages, int price, String fict_name) {
-    super(publisher, author, no_of_pages, price);
-    this.fict_name = fict_name;
+  Fiction(String publisher, String author, int noOfPages, int price, String fictName) {
+    super(publisher, author, noOfPages, price);
+    this.fictName = fictName;
   }
 
   void display() {
     System.out.printf(
         "\nBook Name : %s\nGenere : Fiction\nAuthor : %s\nPublisher : %s\nNumber of pages : %d\nPrice : %d\n\n",
-        this.fict_name, this.author, this.publisher, this.no_of_pages, this.price);
+        this.fictName, this.author, this.publisher, this.noOfPages, this.price);
   }
 
 }
@@ -80,9 +80,9 @@ class Program4 {
           String author = scanner.next();
           String publisher = scanner.next();
           int price = scanner.nextInt();
-          int page_no = scanner.nextInt();
+          int pageNo = scanner.nextInt();
 
-          Literature lit = new Literature(publisher, author, page_no, price, title);
+          Literature lit = new Literature(publisher, author, pageNo, price, title);
 
           System.out.print("Literature details\n-----------------\n");
           lit.display();
@@ -94,9 +94,9 @@ class Program4 {
           String author = scanner.next();
           String publisher = scanner.next();
           int price = scanner.nextInt();
-          int page_no = scanner.nextInt();
+          int pageNo = scanner.nextInt();
 
-          Fiction fict = new Fiction(publisher, author, page_no, price, title);
+          Fiction fict = new Fiction(publisher, author, pageNo, price, title);
 
           System.out.print("Literature details\n-----------------\n");
           fict.display();

@@ -2,7 +2,6 @@
 Create an interface having prototypes of functions area() and perimeter(). Create two classes Circle and Rectangle which implements the above interface. Create a menu driven program to find the area and perimeter of objects. 
 */
 
-
 import java.util.Scanner;
 import java.lang.Math;
 
@@ -69,7 +68,7 @@ class Program6{
           System.out.print("enter the radius of circle : ");
           double radius = scanner.nextDouble();
 
-          Circle circle = new Circle(radius);
+          Shape circle = new Circle(radius);
           System.out.printf("Radius of the circle : %.2f\nArea of circle : %.2f\nPerimeter of the circle : %.2f\n\n",radius,circle.area(),circle.perimeter());
           break;
         }
@@ -78,7 +77,7 @@ class Program6{
           double length = scanner.nextDouble();
           double breadth = scanner.nextDouble();
 
-          Rectangle rectangle = new Rectangle(length , breadth);
+          Shape rectangle = new Rectangle(length , breadth);
 
           System.out.printf("Length of the rectangle : %.2f\nBreadth of the rectangle : %.2f\nArea of the rectangle : %.2f\nPerimeter of the rectangle : %.2f\n\n",length,breadth,rectangle.area(),rectangle.perimeter());
           break;
