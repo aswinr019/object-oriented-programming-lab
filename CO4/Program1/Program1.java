@@ -34,13 +34,14 @@ class Program1{
           System.out.print("enter the base , height , side one , side two and side three of the triangle : ");
           double base = scanner.nextDouble();
           double height = scanner.nextDouble();
-          double side1 = scanner.nextDouble();
-          double side2 = scanner.nextDouble();
-          double side3 = scanner.nextDouble();
+          double sideOne = scanner.nextDouble();
+          double sideTwo = scanner.nextDouble();
+          double sideThree = scanner.nextDouble();
 
-          Triangle triangle = new Triangle(base,height,side1,side2,side3);
 
-          System.out.printf("base of the triangle : %.2f\nheight of the triangle : %.2f\nside one of the triangle : %.2f\nside two of the triangle : %.2f\nside three of the triangle : %.2f\narea of the triangle : %.2f\n\n",triangle.getBase(),triangle.getHeight(),triangle.getSideOne(),triangle.getSideTwo(),triangle.getSideThree(),triangle.getArea());
+          Triangle triangle = new Triangle(base,height,sideOne,sideTwo,sideThree);
+
+          System.out.printf("base of the triangle : %.2f\nheight of the triangle : %.2f\nside one fo the triangle : %.2f\nside two of the triangle : %.2f\nside three of the triangle : %.2f\narea of the triangle : %.2f\n\n",triangle.getBase(),triangle.getHeight(),triangle.getSideOne(),triangle.getSideTwo(),triangle.getSideThree(),triangle.getArea());
 
         }
         case 3 -> {
@@ -65,7 +66,7 @@ class Program1{
         default -> {
           System.out.println("Wrong choice!");
         }
-      }
+   }
 
     }while( choice != 0 );
 

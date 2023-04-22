@@ -1,6 +1,7 @@
 /*
- Create an arithmetic package that has classes and interfaces for the 4 basic arithmetic operations . Test the 
- package by finding the area of these figures.
+ Create an arithmetic package that has classes and interfaces for the 4 basic arithmetic operations . Test the
+ package by implementing all operations on two given numbers.
+
  */
 
 
