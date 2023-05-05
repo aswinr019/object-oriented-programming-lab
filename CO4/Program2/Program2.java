@@ -1,9 +1,7 @@
 /*
  Create an arithmetic package that has classes and interfaces for the 4 basic arithmetic operations . Test the
  package by implementing all operations on two given numbers.
-
  */
-
 
 import arithmetic.*;
 import java.util.Scanner;
@@ -26,7 +24,7 @@ class Program2 {
           break;
         }
         case 1: {
-          System.out.print("Enter two numbers for addition : ");
+          System.out.print("enter two numbers for addition : ");
           double num1 = scanner.nextDouble();
           double num2 = scanner.nextDouble();
 
@@ -35,7 +33,7 @@ class Program2 {
           break;
         }
         case 2: {
-          System.out.print("Enter two numbers for subtraction : ");
+          System.out.print("enter two numbers for subtraction : ");
           double num1 = scanner.nextDouble();
           double num2 = scanner.nextDouble();
 
@@ -44,7 +42,7 @@ class Program2 {
           break;
         }
         case 3: {
-          System.out.print("Enter two numbers for multiplication : ");
+          System.out.print("enter two numbers for multiplication : ");
           double num1 = scanner.nextDouble();
           double num2 = scanner.nextDouble();
 
@@ -53,7 +51,7 @@ class Program2 {
           break;
         }
         case 4: {
-          System.out.print("Enter two numbers for division : ");
+          System.out.print("enter two numbers for division : ");
           double num1 = scanner.nextDouble();
           double num2 = scanner.nextDouble();
 
