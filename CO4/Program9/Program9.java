@@ -152,5 +152,6 @@ class Program9 {
 
       }
     } while (choice != 0);
+    scanner.close();
   }
 }
