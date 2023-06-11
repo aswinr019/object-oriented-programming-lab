@@ -103,6 +103,9 @@ class Program12 {
 			}
 			System.out.println();
 		}
+		default -> {
+			System.out.println("wrong choice!");
+		}
 	}
     }while(choice != 0);
     scanner.close();
