@@ -49,9 +49,9 @@ class Linkedlist {
 
   public void display() {
 
-    for (int i : linkedlist) {
+    for (int i : linkedlist) 
       System.out.printf("%d\t", i);
-    }
+    
   }
 }
 

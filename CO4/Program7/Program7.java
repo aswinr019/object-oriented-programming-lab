@@ -1,5 +1,5 @@
 /*
-  Producer/Consumer using ITC .
+  Producer/Consumer using ITC.
 */
 
 import java.util.ArrayList;
