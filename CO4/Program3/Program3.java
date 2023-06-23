@@ -24,10 +24,7 @@ class User {
 
   private boolean isValidUser(String username , String password ){
 
-    if(this.username.equals(username) && this.password.equals(password))
-      return true;
-    else
-      return false;
+    return (this.username.equals(username) && this.password.equals(password));
   }
 
   void login(String username , String password ) throws AuthenticationException {

@@ -4,6 +4,7 @@ package graphics;
 public class Circle implements Shape {
 
   private double radius;
+  private final PI = 3.14159265359;
 
   public Circle(double radius){
     this.radius = radius;
@@ -18,10 +19,10 @@ public class Circle implements Shape {
   }
 
   public double getArea(){
-    return (  3.14 * this.radius * this.radius );
+    return (  this.PI * this.radius * this.radius );
   }
 
   public double getPerimeter(){
-    return ( 2 * 3.14 * this.radius );
+    return ( 2 * this.PI * this.radius );
   }
 }
