@@ -16,7 +16,7 @@ class User {
 
   private String username , password ;
 
-  User(String username , String password ){
+  public User(String username , String password ){
     this.username = username;
     this.password = password;
     System.out.println("account created!");
@@ -27,7 +27,7 @@ class User {
     return (this.username.equals(username) && this.password.equals(password));
   }
 
-  void login(String username , String password ) throws AuthenticationException {
+  public void login(String username , String password ) throws AuthenticationException {
 
     if(!isValidUser(username,password))
       throw new AuthenticationException("invalid username or password!");
