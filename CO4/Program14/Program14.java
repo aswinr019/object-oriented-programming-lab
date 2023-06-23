@@ -49,7 +49,7 @@ class Program14 {
     DQ deque = new DQ();	  
     Scanner scanner = new Scanner(System.in);
 
-    System.out.println("0) exit\n1) insert to front\n2) insert to rear\n3) delete from front\n4) delte from rear\n5)display\n");
+    System.out.println("0) exit\n1) insert to front\n2) insert to rear\n3) delete from front\n4) delte from rear\n5) display\n");
     int choice;
 
     do{
