@@ -4,7 +4,7 @@ package graphics;
 public class Circle implements Shape {
 
   private double radius;
-  private final PI = 3.14159265359;
+  private final double PI = 3.14159265359;
 
   public Circle(double radius){
     this.radius = radius;
