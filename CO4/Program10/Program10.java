@@ -24,7 +24,7 @@ class Program10 {
 		
     int choice ;
     do {
-	System.out.print("\n0) Exit\n1) Convert to uppercase\n2) Convert to lowercase\n3) Reverse strings\n4) Sort strings\n5) Print strings\nEnter a choice : ");
+	System.out.print("\n0) Exit\n1) Convert to uppercase\n2) Convert to lowercase\n3) Reverse strings\n4) Sort strings\n5) Search string\n6) Print strings\nEnter a choice : ");
 	choice = scanner.nextInt();
 
 	switch(choice){
@@ -75,6 +75,11 @@ class Program10 {
 			System.out.println();
 		}
 		case 5 -> {
+			System.out.print("enter a string to search: ");	
+			String str = scanner.next();
+			System.out.printf("list of strings contains %s : %s",str,strings.contains());
+		}
+		case 6 -> {
 			System.out.print("strings are: ");
 			for(int i = 0; i < number; i++)
 				System.out.printf("%s\t",strings.get(i));

@@ -49,7 +49,7 @@ class Program8 {
     Scanner scanner = new Scanner(System.in);
     int type, choice;
 
-    System.out.print("1) Integer\n2) String\n3) Double\nenter the type of the array you want to create : ");
+    System.out.print("1) Integer\n2) String\n3) Double\nenter the type of the stack you want to create : ");
     type = scanner.nextInt();
     switch (type) {
 
