@@ -1,3 +1,5 @@
+/* Program to draw Circle, Rectangle, Line in Applet. */
+
 import java.awt.*;
 import java.applet.Applet;
 
