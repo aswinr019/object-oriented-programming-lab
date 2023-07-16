@@ -23,20 +23,17 @@ class Program2 {
 
 		System.out.println("writing successful");
 		
-		int character;
-		FileReader fileReader = null;
 		try {
-			fileReader = new FileReader("output.txt");
+			int character;
+			FileReader fileReader = new FileReader("output.txt");
 			System.out.print("file contents: ");
 			while( ( character = fileReader.read() ) != -1)
 				System.out.printf("%c",character);
+			fileReader.close();
 		}
 		catch(FileNotFoundException e){
 			System.out.println("Unable to read file!");
 		}
 		System.out.println();
-		
-		fileReader.close();
-
 	}
 }
