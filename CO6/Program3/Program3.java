@@ -1,6 +1,5 @@
 /* Write a program to copy one file to another */
 
-import java.util.Scanner;
 import java.io.FileWriter;
 import java.io.FileReader;
 import java.io.IOException;
