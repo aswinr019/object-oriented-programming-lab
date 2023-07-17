@@ -4,10 +4,10 @@ import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
-public class SimpleCalculator extends Frame implements ActionListener {
+public class Program5 extends Frame implements ActionListener {
     private TextField inputField;
 
-    public SimpleCalculator() {
+    public Program5() {
         setTitle("Simple Calculator");
         setLayout(new BorderLayout());
         setSize(250, 300);
@@ -32,10 +32,8 @@ public class SimpleCalculator extends Frame implements ActionListener {
         }
 
         add(buttonPanel, BorderLayout.CENTER);
-
         setVisible(true);
     }
-
     public void actionPerformed(ActionEvent e) {
         String command = e.getActionCommand();
         if (command.equals("=")) {
@@ -54,8 +52,7 @@ public class SimpleCalculator extends Frame implements ActionListener {
     private double evaluateExpression(String expression) {
         return Calculator.evaluate(expression);
     }
-
     public static void main(String[] args) {
-        new SimpleCalculator();
+        new Program5();
     }
 }

@@ -3,9 +3,9 @@
 import java.awt.*;
 import java.awt.event.*;
 
-public class KeyEventHandlingProgram extends Frame implements KeyListener {
+public class Program8 extends Frame implements KeyListener {
 
-    public KeyEventHandlingProgram() {
+    public Program8() {
         setTitle("Key Event Handling Program");
         setSize(400, 400);
         setLayout(null);
@@ -31,6 +31,6 @@ public class KeyEventHandlingProgram extends Frame implements KeyListener {
     }
 
     public static void main(String[] args) {
-        new KeyEventHandlingProgram();
+        new Program8();
     }
 }

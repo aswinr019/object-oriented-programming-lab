@@ -9,7 +9,7 @@ public class Program3 extends Frame {
     private TextField[] txtMarks;
     private Label lblResult;
 
-    public MarksCalculator() {
+    public Program3() {
         setTitle("Marks Calculator");
         setSize(300, 200);
         setLayout(new FlowLayout());
@@ -33,7 +33,7 @@ public class Program3 extends Frame {
 
                 double percentage = (totalMarks / 500.0) * 100;
 
-                if (percentage > 100) {
+                if (percentage > 50) {
                     lblResult.setText("\uD83D\uDE00");
                 } else {
                     lblResult.setText("\uD83D\uDE41"); 
@@ -50,7 +50,7 @@ public class Program3 extends Frame {
     }
 
     public static void main(String[] args) {
-        new MarksCalculator();
+        new Program3();
     }
 }
 

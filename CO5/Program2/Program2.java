@@ -7,7 +7,7 @@ public class Program2 extends Frame {
     private TextField txtNum1, txtNum2, txtNum3;
     private Label lblResult;
 
-    public MaxNumberFinder() {
+    public Program2() {
         setTitle("Maximum Number Finder");
         setSize(300, 200);
         setLayout(new FlowLayout());
@@ -48,7 +48,7 @@ public class Program2 extends Frame {
     }
 
     public static void main(String[] args) {
-        new MaxNumberFinder();
+        new Program2();
     }
 }
 
