@@ -3,10 +3,10 @@
 import java.awt.*;
 import java.awt.event.*;
 
-public class EventHandlingProgram extends Frame
+public class Program7 extends  Frame
         implements MouseListener, MouseMotionListener, WindowListener {
 
-    public EventHandlingProgram() {
+    public Program7() {
         setTitle("Event Handling Program");
         setSize(400, 400);
         setLayout(null);
@@ -76,6 +76,6 @@ public class EventHandlingProgram extends Frame
     }
 
     public static void main(String[] args) {
-        new EventHandlingProgram();
+        new Program7();
     }
 }

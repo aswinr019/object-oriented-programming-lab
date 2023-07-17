@@ -1,4 +1,4 @@
-/* Develop a program that has a Choice component which contains the names of shapes such
+/* Develop a program that has a choice component which contains the names of shapes such
 as rectangle, triangle, square and circle. Draw the corresponding shapes for given
 parameters as per user’s choice. */
 
@@ -6,10 +6,10 @@ import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
-public class ShapeDrawingProgram extends Frame implements ActionListener {
+public class Program6 extends Frame implements ActionListener {
     private Choice shapeChoice;
 
-    public ShapeDrawingProgram() {
+    public Program6() {
         setTitle("Shape Drawing Program");
         setSize(400, 400);
         setLayout(new FlowLayout());
@@ -21,12 +21,9 @@ public class ShapeDrawingProgram extends Frame implements ActionListener {
         shapeChoice.add("Square");
         shapeChoice.add("Circle");
         shapeChoice.addActionListener(this);
-
         add(shapeChoice);
-
         setVisible(true);
     }
-
     public void actionPerformed(ActionEvent e) {
         String selectedShape = shapeChoice.getSelectedItem();
         if (selectedShape.equals("Rectangle")) {
@@ -67,6 +64,6 @@ public class ShapeDrawingProgram extends Frame implements ActionListener {
     }
 
     public static void main(String[] args) {
-        new ShapeDrawingProgram();
+        new Program6();
     }
 }
