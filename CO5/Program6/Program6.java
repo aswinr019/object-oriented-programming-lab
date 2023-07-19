@@ -3,10 +3,10 @@ as rectangle, triangle, square and circle. Draw the corresponding shapes for giv
 parameters as per user’s choice. */
 
 import java.awt.*;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
+import java.awt.event.ItemEvent;
+import java.awt.event.ItemListener;
 
-public class Program6 extends Frame implements ActionListener {
+public class Program6 extends Frame implements ItemListener {
     private Choice shapeChoice;
 
     public Program6() {
@@ -20,20 +20,23 @@ public class Program6 extends Frame implements ActionListener {
         shapeChoice.add("Triangle");
         shapeChoice.add("Square");
         shapeChoice.add("Circle");
-        shapeChoice.addActionListener(this);
+        shapeChoice.addItemListener(this);
         add(shapeChoice);
         setVisible(true);
     }
-    public void actionPerformed(ActionEvent e) {
-        String selectedShape = shapeChoice.getSelectedItem();
-        if (selectedShape.equals("Rectangle")) {
-            drawRectangle();
-        } else if (selectedShape.equals("Triangle")) {
-            drawTriangle();
-        } else if (selectedShape.equals("Square")) {
-            drawSquare();
-        } else if (selectedShape.equals("Circle")) {
-            drawCircle();
+
+    public void itemStateChanged(ItemEvent e) {
+        if (e.getSource() == shapeChoice) {
+            String selectedShape = shapeChoice.getSelectedItem();
+            if (selectedShape.equals("Rectangle")) {
+                drawRectangle();
+            } else if (selectedShape.equals("Triangle")) {
+                drawTriangle();
+            } else if (selectedShape.equals("Square")) {
+                drawSquare();
+            } else if (selectedShape.equals("Circle")) {
+                drawCircle();
+            }
         }
     }
 
