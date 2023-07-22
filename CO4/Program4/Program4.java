@@ -6,7 +6,7 @@ import java.util.Scanner;
 
 class NegativeNumberException extends Exception {
   
-  NegativeNumberException(String message){
+  public NegativeNumberException(String message){
     super(message);
   }
 }
