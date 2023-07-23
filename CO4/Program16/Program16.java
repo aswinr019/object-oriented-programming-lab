@@ -6,9 +6,7 @@ import java.util.Scanner;
 import java.util.HashSet;
 import java.util.Iterator;
 
-
 class Program16 {
-
   public static void main(String args[]) {
 
   Scanner scanner = new Scanner(System.in);

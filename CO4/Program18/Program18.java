@@ -2,7 +2,6 @@
  Program to Convert HashMap to TreeMap.
 */
 
-
 import java.util.Scanner;
 import java.util.Map;
 import java.util.HashMap;
@@ -15,7 +14,6 @@ class Program18 {
     Scanner scanner = new Scanner(System.in);
 
     Map<Integer, String> hashMap = new HashMap<>();
-
 
     System.out.print("how many elements: ");
     int number = scanner.nextInt();

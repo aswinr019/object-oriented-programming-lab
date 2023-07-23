@@ -1,4 +1,4 @@
-/* Write a program to copy one file to another */
+/* Write a program to copy one file to another. */
 
 import java.io.FileWriter;
 import java.io.FileReader;

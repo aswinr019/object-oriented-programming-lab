@@ -13,8 +13,7 @@ class NegativeNumberException extends Exception {
 
 class Program4 {
 
-  public static void main( String args[] ){
-
+  public static void main( String args[] ) throws NegativeNumberException {
     Scanner scanner = new Scanner(System.in);
 
     int number , count , sum = 0 ;

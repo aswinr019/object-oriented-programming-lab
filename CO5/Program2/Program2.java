@@ -5,20 +5,20 @@ import java.awt.event.*;
 
 public class Program2 extends Frame {
     private TextField txtNum1, txtNum2, txtNum3;
-    private Label lblResult;
+    private Label lblNum1,lblNum2,lblNum3,lblResult;
 
     public Program2() {
         setTitle("Maximum Number Finder");
         setSize(300, 200);
         setLayout(new FlowLayout());
 
-        Label lblNum1 = new Label("Number 1:");
+        lblNum1 = new Label("Number 1:");
         txtNum1 = new TextField(10);
 
-        Label lblNum2 = new Label("Number 2:");
+        lblNum2 = new Label("Number 2:");
         txtNum2 = new TextField(10);
 
-        Label lblNum3 = new Label("Number 3:");
+        lblNum3 = new Label("Number 3:");
         txtNum3 = new TextField(10);
 
         Button btnFindMax = new Button("Find Maximum");
@@ -34,7 +34,6 @@ public class Program2 extends Frame {
         });
 
         lblResult = new Label();
-
         add(lblNum1);
         add(txtNum1);
         add(lblNum2);
@@ -46,7 +45,6 @@ public class Program2 extends Frame {
 
         setVisible(true);
     }
-
     public static void main(String[] args) {
         new Program2();
     }

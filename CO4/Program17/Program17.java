@@ -8,13 +8,10 @@ import java.util.Map;
 import java.util.HashMap;
 
 class Program17 {
-
   public static void main(String args[]){
   
     Scanner scanner = new Scanner(System.in);
     Map<Integer,String> map = new HashMap<>();
-
-   
 
     System.out.println("0) exit\n1) insert\n2) update\n3) delete\n4) display\n");
     int choice;
@@ -35,8 +32,8 @@ class Program17 {
           System.out.printf("enter %d key value pairs: ",number);
           for(int i = 0; i < number; i++){
             int key = scanner.nextInt();
-	          String string = scanner.next();
-	          map.put(key,string);
+	    String string = scanner.next();
+	    map.put(key,string);
     }
         }
         case 2 -> {
@@ -48,7 +45,6 @@ class Program17 {
 
         }
         case 3 -> {
-          
           System.out.print("enter a valid key to delete: ");
           int key = scanner.nextInt();
           map.remove(key);
@@ -56,14 +52,9 @@ class Program17 {
         case 4 -> {
           System.out.println("map elements: "+map);
         }
-          
-      
         default ->{ System.out.println("wrong choice!");}
-          
       }
     }while(choice != 0);
-    
-    
     scanner.close();
   }
 }

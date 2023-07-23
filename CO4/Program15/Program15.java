@@ -23,7 +23,6 @@ class SetDataStructure {
 	public void display(){
 
 		if(set.isEmpty()) throw new RuntimeException("set is empty!");
-
 		else {
 			Iterator it = set.iterator();
 			while(it.hasNext())

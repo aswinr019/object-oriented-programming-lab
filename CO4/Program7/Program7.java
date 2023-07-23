@@ -15,13 +15,10 @@ class Producer implements Runnable {
   }
 
   public void run() {
-
     int value = 0;
 
     while (true) {
-
       synchronized (buffer) {
-
         while (buffer.size() == capacity) {
 
           try {
@@ -34,7 +31,6 @@ class Producer implements Runnable {
         buffer.add(value);
         value++;
         buffer.notify();
-
       }
     }
   }
@@ -51,9 +47,7 @@ class Consumer implements Runnable {
   public void run() {
 
     while (true) {
-
       synchronized (buffer) {
-
         while (buffer.size() == 0) {
 
           try {
@@ -63,11 +57,8 @@ class Consumer implements Runnable {
           }
         }
         int value = buffer.remove(0);
-
         System.out.printf("Consumed %d\n", value);
-
         buffer.notify();
-
       }
     }
   }
@@ -88,7 +79,6 @@ class Program7 {
 
     threadOne.start();
     threadTwo.start();
-
   }
 }
 

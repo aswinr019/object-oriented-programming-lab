@@ -1,5 +1,5 @@
 /* Write a program that reads from a file having integers. Copy even numbers and odd
-numbers to separate files */
+numbers to separate files. */
 
 import java.io.FileWriter;
 import java.io.FileReader;

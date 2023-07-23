@@ -1,4 +1,4 @@
-/*Program to list the sub directories and files in a given directory and also search for a file name.*/
+/* Program to list the sub directories and files in a given directory and also search for a file name. */
 
 import java.util.Scanner;
 import java.io.File;

@@ -4,7 +4,6 @@
 
 import java.util.Scanner;
 
-
 class AuthenticationException extends Exception {
   
   public AuthenticationException(String message){
@@ -13,7 +12,6 @@ class AuthenticationException extends Exception {
 }
 
 class User {
-
   private String username , password ;
 
   public User(String username , String password ){
