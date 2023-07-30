@@ -2,10 +2,11 @@
 console. */
 
 import java.util.Scanner;
+import java.io.BufferedReader;
+import java.io.BufferedWriter;
 import java.io.FileWriter;
 import java.io.FileReader;
 import java.io.IOException;
-import java.io.FileNotFoundException;
 
 class Program2 {
 	public static void main(String args[]) throws IOException{
@@ -14,26 +15,29 @@ class Program2 {
 		System.out.print("enter something to write to file: ");
 		String content = scanner.nextLine();
 
-		FileWriter fileWriter = new FileWriter("output.txt");
+		try ( BufferedWriter bWriter = new BufferedWriter(new FileWriter("example.txt")) ){
+			bWriter.write(content);
+			bWriter.newLine();
 
+		    }catch(IOException e){
+			System.out.println("Unable to write to file!");
+			e.printStackTrace();
+		    }
 
-		for(int i = 0; i < content.length(); i++)
-			fileWriter.write(content.charAt(i));
-		fileWriter.close();
-
-		System.out.println("writing successful");
+		System.out.println("writing successful!!");
 		
-		try {
-			int character;
-			FileReader fileReader = new FileReader("output.txt");
+		try( BufferedReader bReader = new BufferedReader( new FileReader("example.txt")) ){
+
 			System.out.print("file contents: ");
-			while( ( character = fileReader.read() ) != -1)
-				System.out.printf("%c",character);
-			fileReader.close();
+
+			String line;
+			while( (line = bReader.readLine()) != null ){
+				System.out.println(line);
+			}
 		}
-		catch(FileNotFoundException e){
+		catch(IOException e){
 			System.out.println("Unable to read file!");
+			e.printStackTrace();
 		}
-		System.out.println();
 	}
 }

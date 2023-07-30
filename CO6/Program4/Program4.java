@@ -1,37 +1,67 @@
 /* Write a program that reads from a file having integers. Copy even numbers and odd
-numbers to separate files */
+numbers to separate files. */
 
+import java.io.BufferedReader;
+import java.io.BufferedWriter;
 import java.io.FileWriter;
 import java.io.FileReader;
 import java.io.IOException;
-import java.io.FileNotFoundException;
 
 class Program4 {
-	public static void main(String args[]) throws IOException {
+	public static void main(String args[])  {
 
-		int number;
-		FileReader fileReader = null;
-		try {
-			FileWriter fileWriterOne = new FileWriter("odd.txt");
-			FileWriter fileWriterTwo = new FileWriter("even.txt");
-			fileReader = new FileReader("output.txt");
+		try(
+			BufferedReader bReader = new BufferedReader( new FileReader("example.txt") );
+			BufferedWriter bWriterOdd = new BufferedWriter( new FileWriter("odd.txt") );
+			BufferedWriter bWriterEven = new BufferedWriter( new FileWriter("even.txt") );
+		   ){
+			String line;
 
-			while( ( number = fileReader.read() ) != -1){
-				char character = (char)number;
-				if( character % 2 == 0  )
-					fileWriterTwo.write(character);
-				else
-					fileWriterOne.write(character);
+			while ( ( line = bReader.readLine() ) != null ) {
+				
+				if( Integer.parseInt(line) % 2 == 0 ){
+					bWriterEven.write(line);
+					bWriterEven.newLine();
+				}else{
+					bWriterOdd.write(line);
+					bWriterOdd.newLine();
+				}
 			}
-			fileWriterOne.close();
-			fileWriterTwo.close();
+		}catch(IOException e){
+			System.out.println("Unable to read / write to file!");
+			e.printStackTrace();
 		}
-		catch(FileNotFoundException e){
-			System.out.println("Unable to read file!");
-		}
-		System.out.println();
-		
-		fileReader.close();
 
+		try (
+			BufferedReader bReaderOdd = new BufferedReader( new FileReader("odd.txt") );
+			BufferedReader bReaderEven = new BufferedReader( new FileReader("even.txt") );
+			BufferedReader bReader = new BufferedReader( new FileReader("example.txt") );
+		    ){
+			String line;
+			System.out.println("Contents of original file");
+
+			while( (line = bReader.readLine()) != null ){
+				System.out.println(line);
+			}
+			System.out.println();
+
+			System.out.println("Contents of odd file");
+
+			while( ( line = bReaderOdd.readLine() ) != null ){
+				System.out.println(line);
+			}
+			System.out.println();
+
+			System.out.println("Contents of even file");
+
+			while( ( line = bReaderEven.readLine() ) != null ){
+				System.out.println(line);
+			}
+			System.out.println();
+
+		    }catch(IOException e){
+			System.out.println("Unable to read file!");
+			e.printStackTrace();
+		    }
 	}
 }

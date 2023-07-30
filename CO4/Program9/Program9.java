@@ -5,7 +5,6 @@ Using generic method perform bubble sort.
 import java.util.Scanner;
 
 class BubbleSort<T extends Comparable<T>> {
-
   private T[] items;
 
   public BubbleSort(T[] items) {
@@ -17,7 +16,6 @@ class BubbleSort<T extends Comparable<T>> {
     for (int i = 0; i < items.length - 1; i++) {
       for (int j = 0; j < items.length - i - 1; j++) {
         if (items[j].compareTo(items[j + 1]) > 0) {
-
           swap(j, j + 1);
         }
       }
@@ -73,7 +71,6 @@ class Program9 {
           }
           System.out.println();
 
-
           bs.bubbleSort();
           numbers = bs.getSortedArray();
 
@@ -103,7 +100,6 @@ class Program9 {
             System.out.printf("%s\t", strings[i]);
           }
           System.out.println();
-
 
           bs.bubbleSort();
           strings = bs.getSortedArray();

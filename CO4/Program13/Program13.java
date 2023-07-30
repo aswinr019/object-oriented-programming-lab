@@ -5,7 +5,6 @@ Program to demonstrate the creation of queue object using the PriorityQueue clas
 import java.util.*;
 
 class Queue {
-
 	private PriorityQueue<Integer> priorityqueue ;
 
 	public Queue(){
@@ -36,7 +35,6 @@ class Program13 {
   public static void main(String args[]) {
   
     Scanner scanner = new Scanner(System.in);
-
     Queue queue = new Queue();
 
     System.out.println("0) exit\n1) enqueue\n2) dequeue\n3) display\n");

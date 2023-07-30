@@ -6,7 +6,6 @@ import java.util.Scanner;
 import java.util.ArrayList;
 
 class Stack<T> {
-
   private ArrayList<T> items;
 
   Stack() {
@@ -45,7 +44,6 @@ class Stack<T> {
 class Program8 {
 
   public static void main(String args[]) {
-
     Scanner scanner = new Scanner(System.in);
     int type, choice;
 
@@ -61,7 +59,6 @@ class Program8 {
           choice = scanner.nextInt();
 
           switch (choice) {
-
             case 1 -> {
               System.out.print("enter a number to push : ");
               int number = scanner.nextInt();

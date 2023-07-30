@@ -28,7 +28,6 @@ class PrintMultiplicationTableOfFive extends Thread {
 }
 
 class PrintFirstNPrimeNumbers extends Thread {
-  
   int number ;
 
   PrintFirstNPrimeNumbers(int number){
@@ -36,7 +35,6 @@ class PrintFirstNPrimeNumbers extends Thread {
   }
 
   public void run(){
-
     int count = 0 , num = 2;
 
     while(count < this.number){
@@ -57,7 +55,6 @@ class PrintFirstNPrimeNumbers extends Thread {
         Thread.sleep(2);
       }
       catch(InterruptedException e){ System.out.println("Interrupted exception!");} 
-      
     }
   }
 } 

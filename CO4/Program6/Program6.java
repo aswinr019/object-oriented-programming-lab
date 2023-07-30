@@ -3,11 +3,9 @@ Define two classes , one for generating Fibonacci series and other for displayin
 Implement using Threads. (Runnable Interface)
 */
 
-
 import java.util.Scanner;
 
 class PrintFirstNFibonacciNumbers implements Runnable {
-
   int number;
 
   PrintFirstNFibonacciNumbers(int number) {
@@ -15,7 +13,6 @@ class PrintFirstNFibonacciNumbers implements Runnable {
   }
 
   public void run() {
-  
     int num1 = 0 , num2 = 1  , num3 , count = 2;
 
     System.out.printf("%d\n%d\n",num1,num2);
@@ -43,13 +40,11 @@ class PrintEvenNumbers implements Runnable {
   public void run() {
 
     if(start % 2 != 0) start++;
-
     for(int i = start; i <= end; i+=2) System.out.printf("%d\n",i);    
   }
 }
 
 class Program6 {
-
   public static void main(String args[]) {
     Scanner scanner = new Scanner(System.in);
 

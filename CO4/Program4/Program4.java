@@ -6,15 +6,14 @@ import java.util.Scanner;
 
 class NegativeNumberException extends Exception {
   
-  NegativeNumberException(String message){
+  public NegativeNumberException(String message){
     super(message);
   }
 }
 
 class Program4 {
 
-  public static void main( String args[] ){
-
+  public static void main( String args[] ) throws NegativeNumberException {
     Scanner scanner = new Scanner(System.in);
 
     int number , count , sum = 0 ;

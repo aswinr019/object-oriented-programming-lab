@@ -1,43 +1,48 @@
-/* Write a program to copy one file to another */
+/* Write a program to copy one file to another. */
 
+import java.io.BufferedReader;
+import java.io.BufferedWriter;
 import java.io.FileWriter;
 import java.io.FileReader;
 import java.io.IOException;
-import java.io.FileNotFoundException;
 
 class Program3 {
-	public static void main(String args[]) throws IOException{
+	public static void main(String args[]) {
+		
+		try( 
+			BufferedReader bReader = new BufferedReader(new FileReader("example.txt")); 
+			BufferedWriter bWriter = new BufferedWriter( new FileWriter("copy.txt"));
+		   ){
+			String line;
 
-		try {
-			int character;
-
-			FileReader fileReaderOne = new FileReader("output.txt");
-			FileWriter fileWriter = new FileWriter("copy.txt");
-
-			System.out.print("contents of first file : ");
-			while( ( character = fileReaderOne.read() ) != -1){
-				fileWriter.write(character);
-				System.out.printf("%c",character);
+			while( ( line = bReader.readLine() ) != null ){
+				bWriter.write(line);
+				bWriter.newLine();
 			}
-			System.out.println("copied successfully!");
+		   }catch ( IOException e){
+			System.out.println("Unable to copy file!");
+			e.printStackTrace();
+		   }
+		try (
+			BufferedReader bReaderOriginal = new BufferedReader( new FileReader("example.txt"));
+			BufferedReader bReaderCopy = new BufferedReader( new FileReader("copy.txt"));
+		    ){
+			String line ;
 
-			fileReaderOne.close();
-			fileWriter.close();
-
-			FileReader fileReaderTwo = new FileReader("copy.txt");
-			
-			System.out.print("contents of copy file : ");
-			while( ( character = fileReaderTwo.read() ) != -1 )
-				System.out.printf("%c",character);
-			fileReaderTwo.close();
-
+			System.out.println("Contents of original file");
+			while( (  line = bReaderOriginal.readLine()) != null ){
+				System.out.println(line);
+			}
 			System.out.println();
 
-		}
-		catch(FileNotFoundException e){
-			System.out.println("Unable to read file!");
-		}
-		System.out.println();
+			System.out.println("Contents of copy file");
+			while( ( line = bReaderCopy.readLine() ) != null ){
+				System.out.println(line);
+			}
 
+		}catch(IOException e){
+			System.out.println("Unable to read file!");
+			e.printStackTrace();
+		}
 	}
 }
